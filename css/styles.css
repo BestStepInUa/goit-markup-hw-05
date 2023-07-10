@@ -11,6 +11,7 @@
   --accent-cl: #e7e9fc;
   --light-slate-cl: #8e8f99;
   --green-bg-cl: #31d0aa;
+  --modal-form-textarea-cl: rgba(46, 47, 66, 0.4);
   --modal-form-placeholder-cl: rgba(46, 47, 66, 0.4);
   --modal-bg-color: rgba(46, 47, 66, 0.4);
   --modal-form-input-border-cl: rgba(46, 47, 66, 0.4);
@@ -564,10 +565,10 @@ textarea {
   border-radius: 4px;
   background-color: transparent;
   color: var(--white-cl);
-  box-shadow: var(--subscribe-form-email-input-shadow);
+  filter: drop-shadow(var(--subscribe-form-email-input-shadow));
   outline: transparent;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 12px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   transition: border-color var(--main-transition-duration-and-timing-function);
@@ -583,11 +584,10 @@ textarea {
   border-color: var(--primary-brand-cl);
 }
 .subscribe-form-btn {
-  display: inline-flex;
-  gap: 16px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   padding: 8px 24px;
   border: none;
@@ -606,6 +606,7 @@ textarea {
 }
 .subscribe-form-icon {
   fill: var(--white-cl);
+  margin-left: 16px;
 }
 /* Modal styles */
 .backdrop {
@@ -714,6 +715,9 @@ textarea {
 /* Stecifical styles for textarea comment input */
 .modal-form-input:last-child {
   height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  color: var(--modal-form-textarea-cl);
   padding: 8px 16px;
   resize: none;
 }
