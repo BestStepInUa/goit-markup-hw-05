@@ -37,7 +37,7 @@
               <a class="header-list-link link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="header-list-item">
-              <a class="header-list-link link" href>Contacts</a>
+              <a class="header-list-link link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
@@ -613,13 +613,33 @@
             </label>
           </div>
           <div class="modal-form-field-container">
-            <label class="modal-form-label"
+            <label class="modal-form-label" for="user-comment"
               >Comment
               <div class="modal-form-input-container">
-                <textarea class="modal-form-input" name="user-comment" placeholder="Text input" required> </textarea>
+                <textarea class="modal-form-input" name="user-comment" placeholder="Text input" required></textarea>
               </div>
             </label>
           </div>
+          <div class="modal-form-checkbox-container">
+            <input
+              class="modal-form-checkbox visually-hidden"
+              id="user-privacy-police"
+              name="user-privacy-police"
+              type="checkbox"
+              value="true"
+              required
+            />
+            <label class="modal-form-checkbox-label" for="user-privacy-police">
+              <span class="modal-form-checkbox-accent">
+                <svg class="modal-form-checkbox-icon" width="10" height="8">
+                  <use href="./images/icons.svg#checkbox"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="modal-form-checkbox-link" href="#">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="modal-form-button" type="submit">Send</button>
         </form>
       </div>
     </div>
