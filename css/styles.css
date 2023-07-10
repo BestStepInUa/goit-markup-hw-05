@@ -11,6 +11,7 @@
   --accent-cl: #e7e9fc;
   --light-slate-cl: #8e8f99;
   --green-bg-cl: #31d0aa;
+  --modal-form-placeholder-cl: rgba(46, 47, 66, 0.4);
   --modal-bg-color: rgba(46, 47, 66, 0.4);
   --modal-form-input-border-cl: rgba(46, 47, 66, 0.4);
   --modal-form-bg-cl: #fcfcfc;
@@ -544,34 +545,33 @@ textarea {
 }
 /* Footer subscribe form styles */
 .subscribe-form {
-  width: 453px;
-  height: 80px;
+  display: flex;
+  gap: 24px;
 }
 .subscribe-form-title {
   margin-bottom: 16px;
   color: var(--white-cl);
   font-weight: 500;
 }
-.subscribe-form-container {
-  display: flex;
-  gap: 24px;
-}
 .subscribe-form-input {
   width: 264px;
   height: 40px;
-  padding-left: 16px;
-  margin-right: 24px;
+  padding: 0 16px;
   border: 1px solid var(--white-cl);
-  color: var(--white-cl);
   border-radius: 4px;
-  font-size: 18px;
   background-color: transparent;
+  color: var(--white-cl);
   box-shadow: var(--subscribe-form-email-input-shadow);
   outline: transparent;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
   transition: border-color var(--main-transition-duration-and-timing-function);
 }
 .subscribe-form-input::placeholder {
   color: var(--white-cl);
+  font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
@@ -627,12 +627,12 @@ textarea {
   left: 50%;
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px;
   border-radius: 4px;
   background-color: var(--modal-form-bg-cl);
   box-shadow: var(--modal-shadow);
   transition: transform var(--main-transition-duration-and-timing-function);
   transform: translate(-50%, -50%) scale(1);
-  padding: 72px 24px 24px;
 }
 .modal-close-btn {
   position: absolute;
@@ -666,39 +666,74 @@ textarea {
 }
 /* Modal Order Service form styles */
 .modal-caption {
-  display: block;
-  font-weight: 500;
-  color: var(--dark-cl);
-  width: 360px;
-  text-align: center;
   margin-bottom: 16px;
+  color: var(--dark-cl);
+  font-weight: 500;
+  text-align: center;
 }
 .modal-form {
+  display: flex;
+  flex-direction: column;
 }
-.modal-form-field {
-  display: block;
+.modal-form-field-container {
   margin-bottom: 8px;
+}
+/* Margin for comment input */
+.modal-form-field-container:last-child {
+  margin-bottom: 16px;
 }
 .modal-form-label {
   display: block;
-  margin-bottom: 4px;
+  /* margin-bottom: 4px; */
   color: var(--light-slate-cl);
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
+.modal-form-input-container {
+  position: relative;
+  margin-top: 4px;
+}
 .modal-form-input {
   width: 100%;
-  border-radius: 4px;
-  border: 1px solid var(--modal-form-input-border-cl);
   height: 40px;
-  font-size: 18px;
-  padding: 8px 38px;
+  padding-left: 38px;
+  border: 1px solid var(--modal-form-input-border-cl);
+  border-radius: 4px;
   outline: transparent;
+  background-color: transparent;
+  color: var(--dark-cl);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  transition: border-color var(--main-transition-duration-and-timing-function);
+}
+/* Spesific styles for comment input */
+.modal-form-input:last-child {
+  height: 120px;
+  padding: 8px 16px;
+  resize: none;
+}
+.modal-form-input::placeholder {
+  color: red;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
 }
 .modal-form-input:focus {
   border-color: var(--primary-brand-cl);
 }
 .modal-form-icon {
-  stroke: var(--dark-cl);
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  outline: transparent;
+  fill: var(--dark-cl);
+  transition: fill var(--main-transition-duration-and-timing-function);
+  transform: translateY(-50%);
+}
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--primary-brand-cl);
 }
