@@ -687,7 +687,7 @@ textarea {
 }
 .modal-form-label {
   display: block;
-  /* margin-bottom: 4px; */
+  margin-bottom: 4px;
   color: var(--light-slate-cl);
   font-size: 12px;
   line-height: 1.17;
@@ -695,7 +695,6 @@ textarea {
 }
 .modal-form-input-container {
   position: relative;
-  margin-top: 4px;
 }
 .modal-form-input {
   width: 100%;
