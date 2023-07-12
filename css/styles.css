@@ -1,4 +1,5 @@
 :root {
+  /* Colors */
   --primary-brand-cl: #4d5ae5;
   --dark-cl: #2e2f42;
   --dark-bg-cl: #2e2f42;
@@ -11,13 +12,9 @@
   --accent-cl: #e7e9fc;
   --light-slate-cl: #8e8f99;
   --green-bg-cl: #31d0aa;
-  --modal-form-textarea-cl: rgba(46, 47, 66, 0.4);
-  --modal-form-placeholder-cl: rgba(46, 47, 66, 0.4);
-  --modal-bg-color: rgba(46, 47, 66, 0.4);
-  --modal-form-input-border-cl: rgba(46, 47, 66, 0.4);
-  --modal-form-checkbox-border-cl: rgba(46, 47, 66, 0.4);
-  --modal-form-bg-cl: #fcfcfc;
-
+  --modal-cl: rgba(46, 47, 66, 0.4);
+  --modal-bg-cl: #fcfcfc;
+  /* Gradients and shadows */
   --hero-gradient: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   --header-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 2px 1px 0px rgba(46, 47, 66, 0.08);
@@ -615,7 +612,7 @@ textarea {
   flex-shrink: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--modal-bg-color);
+  background-color: var(--modal-cl);
   transition: opacity var(--main-transition-duration-and-timing-function),
     visibility var(--main-transition-duration-and-timing-function);
 }
@@ -632,7 +629,7 @@ textarea {
   min-height: 584px;
   padding: 72px 24px 24px;
   border-radius: 4px;
-  background-color: var(--modal-form-bg-cl);
+  background-color: var(--modal-bg-cl);
   box-shadow: var(--modal-shadow);
   transition: transform var(--main-transition-duration-and-timing-function);
   transform: translate(-50%, -50%) scale(1);
@@ -700,7 +697,7 @@ textarea {
   width: 100%;
   height: 40px;
   padding-left: 38px;
-  border: 1px solid var(--modal-form-input-border-cl);
+  border: 1px solid var(--modal-cl);
   border-radius: 4px;
   background-color: transparent;
   color: var(--dark-cl);
@@ -715,13 +712,13 @@ textarea {
 .modal-form-input:last-child {
   height: 120px;
   padding: 8px 16px;
-  color: var(--modal-form-textarea-cl);
+  color: var(--modal-cl);
   font-size: 12px;
   line-height: 1.17;
   resize: none;
 }
 .modal-form-input::placeholder {
-  color: var(--modal-form-placeholder-cl);
+  color: var(--modal-cl);
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -758,7 +755,7 @@ textarea {
   width: 16px;
   height: 16px;
   margin-right: 8px;
-  border: 1px solid var(--modal-form-checkbox-border-cl);
+  border: 1px solid var(--modal-cl);
   border-radius: 2px;
   fill: transparent;
   transition: background-color var(--main-transition-duration-and-timing-function),
